@@ -25,9 +25,6 @@ if (Auth::check()) {
             <div class="d-flex justify-content-between">
                 <h6 class="text-body">There are <span class="text-brand">{{$count}}</span> products in your cart</h6>
             </div>
-            <br>
-            <h5 class="text-brand">Free shipping for orders over 100 JD</h5>
-
         </div>
     </div>
     <div class="row" style="padding: 25px 50px">
@@ -42,7 +39,7 @@ if (Auth::check()) {
                             <th scope="col" >Product Image</th>
                             <th scope="col" >Product Name</th>
                             <th scope="col">Unit Price</th>
-                            <th scope="col">Color</th>
+                            {{-- <th scope="col">Color</th> --}}
                             <th scope="col">Size</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Subtotal</th>
@@ -83,9 +80,9 @@ if (Auth::check()) {
                                 <h6 class="text-body">{{$cart['product']['discount_price']}} JD</h6>
                             @endif
                             </td>
-                            <td class="color" data-title="color">
+                            {{-- <td class="color" data-title="color">
                                 <h6 class="text-body">{{$cart['product']['product_color']}}</h6>
-                            </td>
+                            </td> --}}
                             <td class="size" data-title="size">
                                 <h6 class="text-body">{{$cart['product']['product_size']}}</h6>
                             </td>
@@ -168,18 +165,16 @@ if (Auth::check()) {
                                     <h6 class="text-muted">Shipping</h6>
                                 </td>
                                 <td class="cart_total_amount">
-                                    @php 
+                                    {{-- @php 
                                     $Shipping=0;
                                         if ( $AllTotal > 0 && $AllTotal < 100 ) {
                                             $Shipping = 10 ;
                                         
                                         }
-                                    @endphp
-                                    <h6 class="text-heading text-end">{{$Shipping}}</h6></td>
+                                    @endphp --}}
+                                    <h6 class="text-heading text-end">5 JD</h6></td>
                                 
-                                {{-- <td scope="col" colspan="2">
-                                    <div class="divider-2 mt-10 mb-10"></div>
-                                </td> --}}
+                               
                             </tr>
                             <tr>
                                 <td class="cart_total_label">
@@ -187,7 +182,7 @@ if (Auth::check()) {
                                 </td>
                                 <td class="cart_total_amount">
 
-                                    @php
+                                    {{-- @php
                                     $finaltotal = $AllTotal  ;
                                     // no shipping cost
                                    // assign $AllTotal to $finaltotal
@@ -200,14 +195,14 @@ if (Auth::check()) {
                                     // Alltotal is 0 , final total should be 0
                                         $finaltotal == 0 ;
                                      }
-                                    @endphp
-                                    <h5 class="text-end" style="color: red">{{$finaltotal}} JD </h5>
+                                    @endphp --}}
+                                    <h5 class="text-end" style="color: red">{{$AllTotal}} JD </h5>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <a href="{{ route('checkout' , $finaltotal) }}" class="btn mb-10 w-50">Proceed To CheckOut<i class="fi-rs-sign-out ml-15"></i></a>
+                <a href="{{ route('checkout' , $AllTotal) }}" class="btn mb-10 w-50">Proceed To CheckOut<i class="fi-rs-sign-out ml-15"></i></a>
             </div>
                 </div>
 

@@ -28,6 +28,9 @@ Route::get('/it_shop', function () {
 Route::get('/about', function () {
     return view('frontend.about.about');
 });
+Route::get('/contact', function () {
+    return view('frontend.contact.contact');
+});
 
 Route::middleware(['auth'])->group(function(){
 

@@ -139,8 +139,8 @@
         <h5 class="section-title style-1 mb-30">Category</h5>
         <ul>
             <li>
-                <a href="{{ url('/mirror_shop')}}"><img src=" {{ asset('frontend/assets/imgs/shop/backg.jpg') }} "
-                        alt="s" />ALL MIRRORS</a>
+                <a href="{{ url('/it_shop')}}"><img src=" {{ asset('frontend/assets/imgs/shop/pexels-mareefe-932577.jpg') }} "
+                        alt="s" />ALL PERFUMES</a>
             </li>
             @foreach($categories as $category)
 
