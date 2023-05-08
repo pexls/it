@@ -13,12 +13,35 @@
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
-                        <form action="{{ route('product.search') }}" method="post">
+
+                        <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                            <nav class="nav-move">
+                                <ul>
+    
+                                    <li>
+                                        <a class="active" href="{{ url('/')}}">Home</a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a href="{{url ('/it_shop')}}">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url ('/about')}}">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url ('/contact')}}">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                        {{-- <form action="{{ route('product.search') }}" method="post">
                             @csrf
                             <input onfocus="search_result_show()" onblur="search_result_hide()" name="search"
                                 id="search" placeholder="Search for items..." />
                             <div id="searchProducts"></div>
-                        </form>
+                        </form> --}}
 
                     </div>
 
@@ -70,10 +93,10 @@
                                                     href="{{url('product/details/'.$cart['product']['id'].'/'.$cart['product']['product_name'])}}"><img
                                                         alt="img"
                                                         src="{{asset($cart['product']['product_image'])}} " /></a>
-                                            </div>
+                                            </div>
                                             <div class="shopping-cart-title">
-                                                <h4><a
-                                                        href="{{url('product/details/'.$cart['product']['id'].'/'.$cart['product']['product_name'])}}">{{$cart['product']['product_name']}}</a>
+                                                <h4>
+                                                    <a href="{{url('product/details/'.$cart['product']['id'].'/'.$cart['product']['product_name'])}}">{{$cart['product']['product_name']}}</a>
                                                 </h4>
                                                 @if ($cart['product']['discount_price'] == NULL)
                                                 <h4><span>{{$cart->quantity}} ×
@@ -172,37 +195,17 @@
                     <a href="index.html"><img src="{{ asset('frontend/assets/imgs/theme/logo-web.png') }}"
                             alt="logo" /></a>
                 </div>
-                <div class="header-nav d-none d-lg-flex">
+                {{-- <div class="header-nav d-none d-lg-flex">
                     <div class="main-categori-wrap d-none d-lg-block">
                     </div>
-                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
-                        <nav>
-                            <ul>
-
-                                <li>
-                                    <a class="active" href="{{ url('/')}}">Home</a>
-
-                                </li>
-
-                                <li>
-                                    <a href="{{url ('/it_shop')}}">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="{{url ('/about')}}">About</a>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                   
 
                 </div>
 
                 <div class="hotline d-none d-lg-flex">
                     <img src="{{ asset('frontend/assets/imgs/theme/icons/icon-headphone.svg')}}" alt="hotline" />
                     <p>65 - 12345<span>24/7 Support Center</span></p>
-                </div>
+                </div> --}}
 
 
                 <div class="header-action-icon-2 d-block d-lg-none">

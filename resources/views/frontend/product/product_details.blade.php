@@ -101,8 +101,7 @@
                             <div class="short-desc mb-30">
                                 <p class="font-lg">{{$product->short_descp}}</p>
                             </div>
-                            <form action="{{ url('cart/data/store/'.$product->id)}}" method="POST"
-                                class="d-inline-block">
+                            <form action="{{ url('cart/data/store/'.$product->id)}}" method="POST" class="d-inline-block">
                                 @csrf
                                <div class=" attr-detail attr-size mb-30">
                                 <strong class="mr-10">Size : </strong>

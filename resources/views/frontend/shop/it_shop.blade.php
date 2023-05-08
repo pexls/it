@@ -138,7 +138,7 @@ $categories = App\Models\Category::orderBy('category_name' , 'ASC')->get();
 
                         <li>
                             <a href="{{ url('/it_shop')}}"><img
-                                    src=" {{ asset('frontend/assets/imgs/shop/backg.jpg') }} " alt="s" />ALL PERFUMES</a>
+                                    src=" {{ asset('frontend/assets/imgs/shop/pexels-mareefe-932577.jpg') }} " alt="s" />ALL PERFUMES</a>
                         </li>
                         @foreach($categories as $category)
 
